@@ -6,6 +6,10 @@
     padding: 0;
     box-sizing: border-box;
 }
+/* Изменение цвета выделения на старнице */
+::selection {background: $red; color: $white;}
+::-moz-selection {background: $red; color: $white;}
+::-webkit-selection {background: $red; color:$white;}
 
 body {
     overflow-x: hidden;
