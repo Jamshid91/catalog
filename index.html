@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Каталог</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="assets/style/css/plugins/bootstrap.css">
+    <link rel="stylesheet" href="assets/style/css/main.css">
+</head>
+<body>
+    <section class="catalog">
+      <div class="container">
+        <div class="catalog-filter">
+          <div class="row d-flex justify-content-between align-items-start">
+            <div class="col-lg-3 col-sm-6 col-12">
+              <div class="catalog-filter-range">
+                <p class="catalog-filter__title">Высота подъема, мм</p>
+                <div id="slider-range" class="mt-3"></div>
+                <form>
+                  <input type="hidden" name="min-value" >
+                  <input type="hidden" name="max-value">
+                </form>
+                <div class="slider-labels d-flex align-items-center justify-content-between mt-4">
+                  <div class="caption">
+                    <strong class="me-2">от:</strong> <span id="slider-range-value1"></span>
+                  </div>
+                  <div class="caption">
+                    <strong class="me-2">до:</strong> <span id="slider-range-value2"></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-sm-6 col-12 mt-4 mt-sm-0">
+              <div class="catalog-filter-range">
+                <p class="catalog-filter__title">Грузоподъемность, кг</p>
+                <div id="slider-range2" class="mt-3"></div>
+                <form>
+                  <input type="hidden" name="min-value" >
+                  <input type="hidden" name="max-value">
+                </form>
+                <div class="slider-labels d-flex align-items-center justify-content-between mt-4">
+                  <div class="caption">
+                    <strong class="me-2">от:</strong> <span id="slider-range-value3"></span>
+                  </div>
+                  <div class="caption">
+                    <strong class="me-2">до:</strong> <span id="slider-range-value4"></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-2 col-sm-6 col-12 mt-4 mt-lg-0">
+              <p class="catalog-filter__title">Двигатель</p>
+              <div class="d-flex align-items-start flex-column">
+                <label for="petrol"><input type="checkbox" id="petrol" name="petrol">Бензиновый</label>
+                <label for="diesel"><input type="checkbox" id="diesel" name="diesel">Дизельный</label>
+            </div>
+            </div>
+            <div class="col-lg-2 col-sm-6 col-12 mt-4 mt-lg-0">
+              <p class="catalog-filter__title">Тип двигателя</p>
+              <div class="d-flex align-items-start flex-column">
+                <label for="china"><input type="checkbox" id="china" name="china">Китай</label>
+                <label for="usa"><input type="checkbox" id="usa" name="usa">США</label>
+                <label for="japan"><input type="checkbox" id="japan" name="japan">Япония</label>
+            </div>
+            </div>
+          </div>   
+          <div class="row mt-5">
+            <div class="col-12 d-flex justify-content-center">
+              <button class="catalog-filter__btn me-2">Сбросить</button>
+              <button class="catalog-filter__btn ms-2">Показать</button>
+            </div>
+          </div> 
+        </div>
+        <div class="catalog-item">
+          <div class="row">
+            <div class="col-lg-4 col-md-6 col-12 mt-4">
+              <div class="catalog-card position-relative">
+                <div class="favorite d-block position-absolute">
+                  <svg xmlns="http://www.w3.org/2000/svg" height="28px" viewBox="0 0 24 24" width="28px" fill="gray"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+                </div>
+                <div class="new d-block position-absolute">new</div>
+                <a href="#" class="catalog-card__img">
+                  <img loading="lazy" src="assets/img/png/1.jpg" alt="Автопогрузчик" title="Автопогрузчик">
+                </a>
+                <div class="catalog-card-info">
+                    <p class="catalog-card-info__name">EP CPCD15T8</p>
+                    <div class="d-flex align-items-end mt-3">
+                      <span class="catalog-card-info__text">Производитель</span>
+                      <div class="dots"></div>
+                      <span class="catalog-card-info__title">Xinchai(Китай)</span>
+                    </div>
+                    <div class="d-flex align-items-end mt-3">
+                      <span class="catalog-card-info__text">Грузоподъемность</span>
+                      <div class="dots"></div>
+                      <span class="catalog-card-info__title">1500(кг)</span>
+                    </div>
+                    <div class="d-flex align-items-end mt-3">
+                      <span class="catalog-card-info__text">Тип двигателя</span>
+                      <div class="dots"></div>
+                      <span class="catalog-card-info__title">Дизельный</span>
+                    </div>
+                    <div class="d-flex align-items-end mt-3">
+                      <span class="catalog-card-info__text">Высота подъема</span>
+                      <div class="dots"></div>
+                      <span class="catalog-card-info__title">3000(мм)</span>
+                    </div>
+                    <div class="d-flex justify-content-between mt-4">
+                      <button class="catalog-card-info__btn">Подробнее</button>
+                      <button class="catalog-card-info__btn">Купить</button>
+                    </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-12 mt-4">
+              <div class="catalog-card position-relative">
+                <div class="favorite d-block position-absolute">
+                  <svg xmlns="http://www.w3.org/2000/svg" height="28px" viewBox="0 0 24 24" width="28px" fill="gray"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+                </div>
+                <div class="new d-block position-absolute">new</div>
+                <a href="#" class="catalog-card__img">
+                  <img loading="lazy" src="assets/img/png/1.jpg" alt="Автопогрузчик" title="Автопогрузчик">
+                </a>
+                <div class="catalog-card-info">
+                    <p class="catalog-card-info__name">EP CPCD15T8</p>
+                    <div class="d-flex align-items-end mt-3">
+                      <span class="catalog-card-info__text">Производитель</span>
+                      <div class="dots"></div>
+                      <span class="catalog-card-info__title">Xinchai(Китай)</span>
+                    </div>
+                    <div class="d-flex align-items-end mt-3">
+                      <span class="catalog-card-info__text">Грузоподъемность</span>
+                      <div class="dots"></div>
+                      <span class="catalog-card-info__title">1500(кг)</span>
+                    </div>
+                    <div class="d-flex align-items-end mt-3">
+                      <span class="catalog-card-info__text">Тип двигателя</span>
+                      <div class="dots"></div>
+                      <span class="catalog-card-info__title">Дизельный</span>
+                    </div>
+                    <div class="d-flex align-items-end mt-3">
+                      <span class="catalog-card-info__text">Высота подъема</span>
+                      <div class="dots"></div>
+                      <span class="catalog-card-info__title">3000(мм)</span>
+                    </div>
+                    <div class="d-flex justify-content-between mt-4">
+                      <button class="catalog-card-info__btn">Подробнее</button>
+                      <button class="catalog-card-info__btn">Купить</button>
+                    </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-12 mt-4">
+              <div class="catalog-card position-relative">
+                <div class="favorite d-block position-absolute">
+                  <svg xmlns="http://www.w3.org/2000/svg" height="28px" viewBox="0 0 24 24" width="28px" fill="gray"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+                </div>
+                <div class="new d-none position-absolute">new</div>
+                <a href="#" class="catalog-card__img">
+                  <img loading="lazy" src="assets/img/png/1.jpg" alt="Автопогрузчик" title="Автопогрузчик">
+                </a>
+                <div class="catalog-card-info">
+                    <p class="catalog-card-info__name">EP CPCD15T8</p>
+                    <div class="d-flex align-items-end mt-3">
+                      <span class="catalog-card-info__text">Производитель</span>
+                      <div class="dots"></div>
+                      <span class="catalog-card-info__title">Xinchai(Китай)</span>
+                    </div>
+                    <div class="d-flex align-items-end mt-3">
+                      <span class="catalog-card-info__text">Грузоподъемность</span>
+                      <div class="dots"></div>
+                      <span class="catalog-card-info__title">1500(кг)</span>
+                    </div>
+                    <div class="d-flex align-items-end mt-3">
+                      <span class="catalog-card-info__text">Тип двигателя</span>
+                      <div class="dots"></div>
+                      <span class="catalog-card-info__title">Дизельный</span>
+                    </div>
+                    <div class="d-flex align-items-end mt-3">
+                      <span class="catalog-card-info__text">Высота подъема</span>
+                      <div class="dots"></div>
+                      <span class="catalog-card-info__title">3000(мм)</span>
+                    </div>
+                    <div class="d-flex justify-content-between mt-4">
+                      <button class="catalog-card-info__btn">Подробнее</button>
+                      <button class="catalog-card-info__btn">Купить</button>
+                    </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-12 mt-4">
+              <div class="catalog-card position-relative">
+                <div class="favorite d-block position-absolute">
+                  <svg xmlns="http://www.w3.org/2000/svg" height="28px" viewBox="0 0 24 24" width="28px" fill="gray"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+                </div>
+                <div class="new d-none position-absolute">new</div>
+                <a href="#" class="catalog-card__img">
+                  <img loading="lazy" src="assets/img/png/1.jpg" alt="Автопогрузчик" title="Автопогрузчик">
+                </a>
+                <div class="catalog-card-info">
+                    <p class="catalog-card-info__name">EP CPCD15T8</p>
+                    <div class="d-flex align-items-end mt-3">
+                      <span class="catalog-card-info__text">Производитель</span>
+                      <div class="dots"></div>
+                      <span class="catalog-card-info__title">Xinchai(Китай)</span>
+                    </div>
+                    <div class="d-flex align-items-end mt-3">
+                      <span class="catalog-card-info__text">Грузоподъемность</span>
+                      <div class="dots"></div>
+                      <span class="catalog-card-info__title">1500(кг)</span>
+                    </div>
+                    <div class="d-flex align-items-end mt-3">
+                      <span class="catalog-card-info__text">Тип двигателя</span>
+                      <div class="dots"></div>
+                      <span class="catalog-card-info__title">Дизельный</span>
+                    </div>
+                    <div class="d-flex align-items-end mt-3">
+                      <span class="catalog-card-info__text">Высота подъема</span>
+                      <div class="dots"></div>
+                      <span class="catalog-card-info__title">3000(мм)</span>
+                    </div>
+                    <div class="d-flex justify-content-between mt-4">
+                      <button class="catalog-card-info__btn">Подробнее</button>
+                      <button class="catalog-card-info__btn">Купить</button>
+                    </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-12 mt-4">
+              <div class="catalog-card position-relative">
+                <div class="favorite d-block position-absolute">
+                  <svg xmlns="http://www.w3.org/2000/svg" height="28px" viewBox="0 0 24 24" width="28px" fill="gray"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+                </div>
+                <div class="new d-none position-absolute">new</div>
+                <a href="#" class="catalog-card__img">
+                  <img loading="lazy" src="assets/img/png/1.jpg" alt="Автопогрузчик" title="Автопогрузчик">
+                </a>
+                <div class="catalog-card-info">
+                    <p class="catalog-card-info__name">EP CPCD15T8</p>
+                    <div class="d-flex align-items-end mt-3">
+                      <span class="catalog-card-info__text">Производитель</span>
+                      <div class="dots"></div>
+                      <span class="catalog-card-info__title">Xinchai(Китай)</span>
+                    </div>
+                    <div class="d-flex align-items-end mt-3">
+                      <span class="catalog-card-info__text">Грузоподъемность</span>
+                      <div class="dots"></div>
+                      <span class="catalog-card-info__title">1500(кг)</span>
+                    </div>
+                    <div class="d-flex align-items-end mt-3">
+                      <span class="catalog-card-info__text">Тип двигателя</span>
+                      <div class="dots"></div>
+                      <span class="catalog-card-info__title">Дизельный</span>
+                    </div>
+                    <div class="d-flex align-items-end mt-3">
+                      <span class="catalog-card-info__text">Высота подъема</span>
+                      <div class="dots"></div>
+                      <span class="catalog-card-info__title">3000(мм)</span>
+                    </div>
+                    <div class="d-flex justify-content-between mt-4">
+                      <button class="catalog-card-info__btn">Подробнее</button>
+                      <button class="catalog-card-info__btn">Купить</button>
+                    </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-12 mt-4">
+              <div class="catalog-card position-relative">
+                <div class="favorite d-block position-absolute">
+                  <svg xmlns="http://www.w3.org/2000/svg" height="28px" viewBox="0 0 24 24" width="28px" fill="gray"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+                </div>
+                <div class="new d-block position-absolute">new</div>
+                <a href="#" class="catalog-card__img">
+                  <img loading="lazy" src="assets/img/png/1.jpg" alt="Автопогрузчик" title="Автопогрузчик">
+                </a>
+                <div class="catalog-card-info">
+                    <p class="catalog-card-info__name">EP CPCD15T8</p>
+                    <div class="d-flex align-items-end mt-3">
+                      <span class="catalog-card-info__text">Производитель</span>
+                      <div class="dots"></div>
+                      <span class="catalog-card-info__title">Xinchai(Китай)</span>
+                    </div>
+                    <div class="d-flex align-items-end mt-3">
+                      <span class="catalog-card-info__text">Грузоподъемность</span>
+                      <div class="dots"></div>
+                      <span class="catalog-card-info__title">1500(кг)</span>
+                    </div>
+                    <div class="d-flex align-items-end mt-3">
+                      <span class="catalog-card-info__text">Тип двигателя</span>
+                      <div class="dots"></div>
+                      <span class="catalog-card-info__title">Дизельный</span>
+                    </div>
+                    <div class="d-flex align-items-end mt-3">
+                      <span class="catalog-card-info__text">Высота подъема</span>
+                      <div class="dots"></div>
+                      <span class="catalog-card-info__title">3000(мм)</span>
+                    </div>
+                    <div class="d-flex justify-content-between mt-4">
+                      <button class="catalog-card-info__btn">Подробнее</button>
+                      <button class="catalog-card-info__btn">Купить</button>
+                    </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="assets/js/plugins/jquery.js"></script>
+    <script src="assets/js/plugins/range.js"></script>
+    <script src="assets/js/index.js"></script>
+</body>
+</html>
